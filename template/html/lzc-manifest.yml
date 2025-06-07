@@ -1,0 +1,11 @@
+name: 扫雷
+package: xu.deploy.minesweeper
+version: 0.0.1
+description:
+license: https://choosealicense.com/licenses/mit/
+homepage:
+author:
+application:
+  subdomain: minesweeper
+  routes:
+    - /=file:///lzcapp/pkg/content
