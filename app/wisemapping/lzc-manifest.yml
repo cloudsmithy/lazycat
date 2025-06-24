@@ -1,0 +1,15 @@
+lzc-sdk-version: 0.1
+package: xu.deploy.wisemapping
+version: 0.0.1
+name: wisemapping
+description: wisemapping
+license: https://choosealicense.com/licenses/mit/
+homepage: https://github.com/wisemapping/wisemapping-open-source
+author: xu
+application:
+  subdomain: wisemapping
+  routes:
+    - /=http://wisemapping.xu.deploy.wisemapping.lzcapp:8080/
+services:
+  wisemapping:
+    image: registry.lazycat.cloud/u04123229/wisemapping/wisemapping:61b56f5b066e6f7f
