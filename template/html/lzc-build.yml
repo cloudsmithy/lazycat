@@ -2,7 +2,7 @@
 manifest: ./lzc-manifest.yml
 
 # contentdir: 指定打包的内容，将会打包到 lpk 中
-contentdir: ./a
+contentdir: ./dist
 
 # pkgout: lpk 包的输出路径
 pkgout: ./

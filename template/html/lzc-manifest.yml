@@ -1,11 +1,11 @@
-name: 扫雷
-package: xu.deploy.minesweeper
+name: 口袋妖怪卡牌构建器
+package: xu.deploy.pokemon
 version: 0.0.1
 description:
 license: https://choosealicense.com/licenses/mit/
-homepage:
+homepage: https://github.com/simeydotme/pokemon-cards-css
 author:
 application:
-  subdomain: minesweeper
+  subdomain: pokemon
   routes:
     - /=file:///lzcapp/pkg/content
