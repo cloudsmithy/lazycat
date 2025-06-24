@@ -1,0 +1,15 @@
+lzc-sdk-version: 0.1
+package: xu.deploy.coco-ai
+version: 0.0.1
+name: coco-ai
+description: coco-ai
+license: https://choosealicense.com/licenses/mit/
+homepage: https://coco.rs/#install
+author: xu
+application:
+  subdomain: coco-ai
+  routes:
+    - /=http://coco-ai.xu.deploy.coco-ai.lzcapp:9000/
+services:
+  coco-ai:
+    image: registry.lazycat.cloud/u04123229/infinilabs/coco:2bf96bbb93125c4a
