@@ -1,0 +1,26 @@
+lzc-sdk-version: "0.1"
+name: gospeed
+package: xu.deploy.gospeed
+version: 1.7.0
+description: A modern download manager that supports all platforms. Built with
+  Golang and Flutter.
+homepage: https://github.com/GopeedLab/gopeed
+author: GopeedLab
+application:
+  subdomain: gospeed
+  background_task: false
+  multi_instance: false
+  gpu_accel: false
+  kvm_accel: false
+  usb_accel: false
+  routes:
+    - /=http://gopeed.xu.deploy.gospeed.lzcapp:9999/
+services:
+  gopeed:
+    image: registry.lazycat.cloud/u04123229/liwei2633/gopeed:5c4577795372dd81
+    environment:
+      - PUID=0
+      - PGID=0
+      - UMASK=22
+    binds:
+      - /lzcapp/var/Downloads:/app/Downloads

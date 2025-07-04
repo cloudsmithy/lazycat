@@ -1,15 +1,26 @@
-lzc-sdk-version: 0.1
+lzc-sdk-version: "0.1"
+name: coco-ai
 package: xu.deploy.coco-ai
 version: 0.0.1
-name: coco-ai
 description: coco-ai
-license: https://choosealicense.com/licenses/mit/
 homepage: https://coco.rs/#install
 author: xu
 application:
   subdomain: coco-ai
+  public_path:
+    - /
+  background_task: false
+  multi_instance: false
+  gpu_accel: false
+  kvm_accel: false
+  usb_accel: false
   routes:
-    - /=http://coco-ai.xu.deploy.coco-ai.lzcapp:9000/
+    - /=http://coco.xu.deploy.coco-ai.lzcapp:9000/
 services:
-  coco-ai:
-    image: registry.lazycat.cloud/u04123229/infinilabs/coco:2bf96bbb93125c4a
+  coco:
+    image: registry.lazycat.cloud/u04123229/infinilabs/coco:a770c87196e142d8
+    environment:
+      - EASYSEARCH_INITIAL_ADMIN_PASSWORD=coco-server
+      - ES_JAVA_OPTS=-Xms2g -Xmx2g
+    binds:
+      - /lzcapp/var/data:/app/easysearch/data
