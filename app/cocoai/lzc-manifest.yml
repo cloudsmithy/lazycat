@@ -18,7 +18,7 @@ application:
     - /=http://coco.xu.deploy.coco-ai.lzcapp:9000/
 services:
   coco:
-    image: registry.lazycat.cloud/u04123229/infinilabs/coco:a770c87196e142d8
+    image: registry.lazycat.cloud/u04123229/infinilabs/coco:50a708da58d804c8
     environment:
       - EASYSEARCH_INITIAL_ADMIN_PASSWORD=coco-server
       - ES_JAVA_OPTS=-Xms2g -Xmx2g

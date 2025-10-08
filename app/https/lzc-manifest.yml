@@ -1,0 +1,17 @@
+lzc-sdk-version: "0.1"
+name: proxy
+package: cloud.lazycat.app.proxy
+version: 0.0.1
+
+application:
+  subdomain: proxy
+
+  upstreams:
+    # 明确指定一些细微行为
+    - location: /
+      backend: https://easysearch:9200
+      disable_backend_ssl_verify: true #因此需要在这里配置跳过SSL验证
+
+services:
+  easysearch:
+    image: registry.lazycat.cloud/u04123229/infinilabs/easysearch:5dc6296f5370aacc
