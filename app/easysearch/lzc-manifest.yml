@@ -1,0 +1,23 @@
+lzc-sdk-version: "0.1"
+version: 1.15.3
+name: easysearch
+description: easysearch
+package: xu.deploy.easysearch
+homepage: https://infinilabs.cn/docs/
+author: xu
+application:
+  subdomain: easysearch
+  public_path:
+    - /
+  routes:
+    - /=http://easysearch.xu.deploy.easysearch.lzcapp:9200/
+services:
+  easysearch:
+    image: >-
+      registry.lazycat.cloud/u04123229/infinilabs/easysearch:5dc6296f5370aacc
+    environment:
+      - security.ssl.http.enabled=false
+      - EASYSEARCH_INITIAL_ADMIN_PASSWORD=passwd123
+    binds:
+      - /lzcapp/var/easysearch/data:/app/easysearch/data
+    mem_limit: 1g

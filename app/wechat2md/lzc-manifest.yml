@@ -1,0 +1,19 @@
+lzc-sdk-version: "0.1"
+name: wechat2md
+package: xu.deploy.wechat2md
+version: 0.8.0
+description: wechat2md
+homepage: https://hub.docker.com/repository/docker/cloudsmithy/wechat2md/general
+author: xu
+application:
+  subdomain: wechat2md
+  background_task: false
+  multi_instance: false
+  gpu_accel: false
+  kvm_accel: false
+  usb_accel: false
+  routes:
+    - /=http://wechat2md.xu.deploy.wechat2md.lzcapp:5001/
+services:
+  wechat2md:
+    image: registry.lazycat.cloud/u04123229/cloudsmithy/wechat2md:7137dda109309677

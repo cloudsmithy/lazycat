@@ -1,7 +1,7 @@
 lzc-sdk-version: "0.1"
 name: coco-ai
 package: xu.deploy.coco-ai
-version: 0.0.1
+version: 0.8.0
 description: coco-ai
 homepage: https://coco.rs/#install
 author: xu
